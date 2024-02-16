@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nodejs-sample-1
+  description: test
+  links:
+  - url: https://openshift-gitops-server-openshift-gitops.apps.rosa.sb2366-hcp.qmaa.p3.openshiftapps.com/applications/openshift-gitops/nodejs-sample-1-dev
+    title: ArgoCD
+    icon: dashboard
+  - url: https://nodejs-sample-1-nodejs-sample-1-develop.apps.rosa.sb2366-hcp.qmaa.p3.openshiftapps.com
+    title: Application
+    icon: dashboard
+  annotations:
+    argocd/app-name: nodejs-sample-1-dev
+    tektonci/build-namespace: nodejs-sample-1-develop
+    backstage.io/kubernetes-id: nodejs-sample-1
+    backstage.io/kubernetes-namespace: nodejs-sample-1-develop
+    janus-idp.io/tekton-enabled : 'true'
+    janus-idp.io/tekton : nodejs-sample-1
+    backstage.io/techdocs-ref: url:https://github.com/rhdh-skitamura-org/nodejs-sample-1-app
+    github.com/project-slug: rhdh-skitamura-org/nodejs-sample-1-app
+    sonarqube.org/project-key: nodejs-sample-1
+spec:
+  type: api 
+  system: "system:default/test-system"
+  lifecycle: production
+  owner: "group:default/skitamura-team"
+  git: github
+  git_host_url: github.com
+  git_owner_name: rhdh-skitamura-org

@@ -1,0 +1,11 @@
+site_name: nodejs-sample-1
+site_description: test
+repo_url: https://github.com/rhdh-skitamura-org/nodejs-sample-1-app
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - nodejs-sample-1 Documentation: index.md
